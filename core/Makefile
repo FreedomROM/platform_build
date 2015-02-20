@@ -1467,9 +1467,9 @@ ifneq ($(recovery_fstab),)
 
 name := $(TARGET_PRODUCT)
 ifeq ($(TARGET_BUILD_TYPE),debug)
-  name := $(name)
+  name := $(name)_debug
 endif
-name := $(name)-(shell date +%m%d%H%M)
+name := $(name)-ota-$(FILE_NAME_TAG)
 
 INTERNAL_OTA_PACKAGE_TARGET := $(PRODUCT_OUT)/$(name).zip
 
